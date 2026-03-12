@@ -27,8 +27,8 @@ In this lab you have learned about multiplexers and demultiplexers.
 
 ### In plain English describe the function and use of a demultiplexer
 
-    A demultiplexer (demux) is used to create multiple outputs from single input. 
+    A demultiplexer (demux) is used to create multiple outputs from single input. Its purpose is to interact with a single input, and then choose from multiple. So we can have a single input choose multiple outputs, which in essance is the demux is the opposite of muxes. 
 
 ### What other uses might these circuits have? (Think Shannon’s)
 
-    This circuits might be used a communication device. 
+    This circuits might be used a communication device. They can also be used to create boolean functions using shannon's expansion, having a certian input be one or two of the switches. You can also use it for memory management, which will probably be one of the most important. 
