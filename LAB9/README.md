@@ -22,10 +22,13 @@ In this lab, you learned about the basic building block of sequential circuits: 
 ## Lab Questions
 
 ###  Why can we not just use structural Verilog to implement latches?
+
 We can implement latches using structural Verilog, but it is very difficult and impractical to implement. Using behavioral verilog it allows us to save on resources on the board.
+
 ### What is the meaning of always @(*) in a sensitivity block?
+
 An always @(*) creates a complete sensitivity list for combinational logic. They can even contain regular continuous assignment wherein no memory is needed.
+
 ### What importance is memory to digital circuits?
 
     The importance of Memory to digital circuits is so important as its basically the building block for everything. Its the backbone which allows us to store and define data in our operating systems. It allows data to function, process, and main information. Without memory a digital circuit couldn't do half the stuff we need it too. 
-    
