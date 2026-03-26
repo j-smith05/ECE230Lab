@@ -13,7 +13,7 @@ In this lab, you learned about the basic building block of sequential circuits: 
 
 ## Names
 
-    Group 23/39: Jacob Smith, Matthew Mai, Alan Long
+    Group 23/39: Jacob Smith, Matthew Mai, Alan Fong
 
 ## Summary
 
