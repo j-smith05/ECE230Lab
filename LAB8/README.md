@@ -31,4 +31,4 @@ In this lab you have learned about multiplexers and demultiplexers.
 
 ### What other uses might these circuits have? (Think Shannon’s)
 
-    This circuits might be used a communication device. They can also be used to create boolean functions using shannon's expansion, having a certian input be one or two of the switches. You can also use it for memory management, which will probably be one of the most important. 
+    This circuits might be used a communication device. They can also be used to create boolean functions using shannon's expansion, having a certian input be one or two of the switches. You can also use it for memory management, which will probably be one of the most important.
