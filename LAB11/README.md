@@ -32,4 +32,4 @@ In this lab, we learned how to make clock dividers from two types of counters.
 
 ### 3 - What width of ring counter would you use to get to an output of ~1KHz?
 
-    To calculate we used log2(cval) which our cval is 1000, and when we calculate that we get around ~10 kHz. 
+    To calculate we used log2(cval) which our cval is 1000, and when we calculate that we get around ~10 bits 
