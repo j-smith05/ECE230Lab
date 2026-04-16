@@ -24,12 +24,12 @@ In this lab we learned about the differences and similaries between two types of
 
 ### Compare and contrast One Hot and Binary encodings
 
-One-hot encoding uses a single flip-flop per state, which will cause it to take more flip-flops but makes the next state logic next-state logic simpler and easier to understand. Binary encoding uses fewer flip-flops, but the logic is more compact in hardware and usually requires more careful K-map work because each state is represented by multiple bits. 
+One-hot encoding uses a single flip-flop per state, which will cause it to take more flip-flops but makes the next state logic next-state logic simpler and easier to understand. Binary encoding uses fewer flip-flops, but the logic is more compact in hardware and usually requires more careful K-map work because each state is represented by multiple bits
 
 ### Which method did your team find easier, and why?
 
-Our team found one hot encoding easier then binary. As one hot uses multiple flip flops, which allowed us to create more direct and understandable equations. Binary was more compact, but it required more thought and thinking to connect between the different k-maps for each of the different states. 
+Our team found one hot encoding easier then binary. As one hot uses multiple flip flops, which allowed us to create more direct and understandable equations. Binary was more compact, but it required more thought and thinking to connect between the different k-maps for each of the different states
 
 ### In what conditions would you have to use one over the other? Think about resource utilization on the FPGA
 
-When working with FPGA if we can use as many flip flops as we want, and simple logic a one_shot encoding logic would what would work best. When working with less flip flops, which is more useful when our number of states, it will be a better idea to use binary as binary is ideal for less flip flops and less storage. 
+When working with FPGA if we can use as many flip flops as we want, and simple logic a one_shot encoding logic would what would work best. When working with less flip flops, which is more useful when our number of states is exponently larger/LEDS, it will be a better idea to use binary as binary is ideal for less flip flops and less storage
