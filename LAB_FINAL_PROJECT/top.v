@@ -51,7 +51,7 @@ wire [5:0] load_value = sw[15:10];      //Set Timer Value (Value to load in time
 timer timer_mod(
     .clk(clk_1Hz),
     .rst(btnC),
-    .en(run && (mode == 0)),
+    .en(run && (mode == 1)),
     .state(led[8:3])
 );
 
@@ -60,7 +60,7 @@ timer timer_mod(
 stopwatch stop_mod(
     .clk(clk_1Hz),
     .rst(btnC),
-    .en(run && (mode == 1)),
+    .en(run && (mode == 0)),
     .load(load),
     .load_value(load_value),
     .state(led[15:10])
