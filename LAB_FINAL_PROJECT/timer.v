@@ -1,6 +1,6 @@
-// StopWatch: Modulo-60 Counter
+// Timer: Modulo-60 Counter
 // Counts from 0 to 59, then wraps back to 0
-module stopwatch(
+module timer(
     input clk,                 // Clock signal: counter increments on each rising edge
     input rst,                 // Reset: forces counter back to 0 when high
     input en,                  // Enable: counter only advances when high
