@@ -1,7 +1,7 @@
-// Timer: Mod-60 Down Counter with Synchronous Load
+// Stopwatch: Mod-60 Down Counter with Synchronous Load
 // Counts DOWN from a given value to 0, then holds at 0
 
-module timer(
+module stopwatch(
     input clk,                  // Clock signal (updates happen on rising edge)
     input rst,                  // Asynchronous reset (immediate reset to 0)
     input en,                   // Enable signal (counter only runs when en = 1)
