@@ -1,37 +1,37 @@
-//Timer: Mod-60 downcounter with synchronous load
+// Timer: Mod-60 Down Counter with Synchronous Load
+// Counts DOWN from a given value to 0, then holds at 0
+
 module timer(
-    input clk,
-    input rst,
-    input en,               //Enables or Disables clock
-    input load,             //If load=1, load the counter with "load_value"
-    input [5:0] load_value, //Value to load into counter register. Counter will then start counting from this value
-    output reg [5:0] state     //6-bits to represent the highest number 59
+    input clk,                  // Clock signal (updates happen on rising edge)
+    input rst,                  // Asynchronous reset (immediate reset to 0)
+    input en,                   // Enable signal (counter only runs when en = 1)
+    input load,                 // Load control (when 1, load_value is stored into state)
+    input [5:0] load_value,     // Value to load into the counter (0–59)
+    output reg [5:0] state      // 6-bit register to hold current count
 );
 
-    wire [5:0] next_val;
-    wire [4:0] y;
-    
-    assign next_val[0] = state[0] ^ 1'b1;
-    assign y[0] = ~state[0] & 1'b1;
-    assign next_val[1] = state[1] ^ y[0];
-    assign y[1] = ~state[1] & y[0];
-    assign next_val[2] = state[2] ^ y[1];
-    assign y[2] = ~state[2] & y[1];
-    assign next_val[3] = state[3] ^ y[2];
-    assign y[3] = ~state[3] & y[2];
-    assign next_val[4] = state[4] ^ y[3];
-    assign y[4] = ~state[4] & y[3];
-    assign next_val[5] = state[5] ^ y[4];
 
+    // Sequential Logic: Runs on clock edge or reset
     always @(posedge clk or posedge rst) begin
-        if (rst)
+        if (rst) begin
+            // Asynchronous reset: immediately set counter to 0
             state <= 6'd0;
-        else if (load)
+
+        end else if (load) begin
+            // Synchronous load: takes priority over counting
+            // Loads a custom starting value into the counter
             state <= load_value;
-        else if(en) begin
-            if(state != 6'd0)
-                state <= next_val;
+
+        end else if (en) begin
+            // Only count when enabled
+            if (state != 6'd0) begin
+                // Decrement the counter by 1 each clock cycle
+                state <= state - 1'b1;
             end
-         end
+            // If state == 0, do nothing (hold at 0)
+        end
+
+        // If en == 0, the counter holds its current value
+    end
 
 endmodule
