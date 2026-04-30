@@ -46,18 +46,18 @@ wire run    = sw[1];        // 0 = pause (circuit holds it state), 1 = run (coun
 wire load   = sw[2];        // 1 = load value from load_value into timer counter, 0 = do nothing
 wire [5:0] load_value = sw[15:10];      //Set Timer Value (Value to load in timer)
 
-//Stopwatch Module Instance
+//Timer Module Instance
 //Use "clk_1Hz" as clock signal to stopwatch and timer modules
-stopwatch stop_mod(
+timer timer_mod(
     .clk(clk_1Hz),
     .rst(btnC),
     .en(run && (mode == 0)),
     .state(led[8:3])
 );
 
-//Timer Module Instance
+//Stopwatch Module Instance
 //Use "clk_1Hz" as clock signal to stopwatch and timer modules
-timer time_mod(
+stopwatch stop_mod(
     .clk(clk_1Hz),
     .rst(btnC),
     .en(run && (mode == 1)),
